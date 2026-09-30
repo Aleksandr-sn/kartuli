@@ -1,0 +1,577 @@
+{
+ "version": "2026-10-01",
+ "topics": [
+  {
+   "id": "people",
+   "name": "Школа и люди",
+   "icon": "🏫"
+  },
+  {
+   "id": "colors",
+   "name": "Цвета",
+   "icon": "🎨"
+  },
+  {
+   "id": "bag",
+   "name": "Портфель",
+   "icon": "🎒"
+  },
+  {
+   "id": "room",
+   "name": "В классе",
+   "icon": "🪑"
+  },
+  {
+   "id": "verbs",
+   "name": "Действия",
+   "icon": "✍️"
+  },
+  {
+   "id": "commands",
+   "name": "Команды на уроке",
+   "icon": "🔔"
+  }
+ ],
+ "words": [
+  {
+   "id": "skola",
+   "ka": "სკოლა",
+   "ru": "школа",
+   "tr": "скола",
+   "pic": "🏫",
+   "topic": "people",
+   "family": "skola",
+   "added": "2026-09-22"
+  },
+  {
+   "id": "ezo",
+   "ka": "ეზო",
+   "ru": "двор",
+   "tr": "эзо",
+   "pic": "⛲",
+   "topic": "people",
+   "family": "ezo",
+   "added": "2026-09-22"
+  },
+  {
+   "id": "khe",
+   "ka": "ხე",
+   "ru": "дерево",
+   "tr": "хэ",
+   "pic": "🌳",
+   "topic": "people",
+   "family": "khe",
+   "added": "2026-09-22"
+  },
+  {
+   "id": "bavshvebi",
+   "ka": "ბავშვები",
+   "ru": "дети",
+   "tr": "бавшвеби",
+   "pic": "👧👦",
+   "topic": "people",
+   "family": "bavshvebi",
+   "added": "2026-09-22"
+  },
+  {
+   "id": "gogo",
+   "ka": "გოგო",
+   "ru": "девочка",
+   "tr": "гого",
+   "pic": "👧",
+   "topic": "people",
+   "family": "gogo",
+   "added": "2026-09-22"
+  },
+  {
+   "id": "bichi",
+   "ka": "ბიჭი",
+   "ru": "мальчик",
+   "tr": "бичи",
+   "pic": "👦",
+   "topic": "people",
+   "family": "bichi",
+   "added": "2026-09-22"
+  },
+  {
+   "id": "mastsavlebeli",
+   "ka": "მასწავლებელი",
+   "ru": "учитель",
+   "tr": "масцавлебели",
+   "pic": "🧑‍🏫",
+   "topic": "people",
+   "family": "mastsavlebeli",
+   "added": "2026-09-22"
+  },
+  {
+   "id": "klasi",
+   "ka": "კლასი",
+   "ru": "класс",
+   "tr": "класи",
+   "pic": "📚🪑",
+   "topic": "people",
+   "family": "klasi",
+   "added": "2026-09-22"
+  },
+  {
+   "id": "dapa",
+   "ka": "დაფა",
+   "ru": "доска",
+   "tr": "дапа",
+   "pic": "svg:board",
+   "topic": "room",
+   "family": "dapa",
+   "added": "2026-09-22"
+  },
+  {
+   "id": "tsigni",
+   "ka": "წიგნი",
+   "ru": "книга",
+   "tr": "цигни",
+   "pic": "📖",
+   "topic": "bag",
+   "family": "tsigni",
+   "added": "2026-09-22"
+  },
+  {
+   "id": "rveuli",
+   "ka": "რვეული",
+   "ru": "тетрадь",
+   "tr": "рвеули",
+   "pic": "📓",
+   "topic": "bag",
+   "family": "rveuli",
+   "added": "2026-09-22"
+  },
+  {
+   "id": "tsiteli",
+   "ka": "წითელი",
+   "ru": "красный",
+   "tr": "ци́тэли",
+   "pic": "color:#E53935",
+   "topic": "colors",
+   "family": "tsiteli",
+   "added": "2026-09-22"
+  },
+  {
+   "id": "mtsvane",
+   "ka": "მწვანე",
+   "ru": "зелёный",
+   "tr": "мцва́нэ",
+   "pic": "color:#43A047",
+   "topic": "colors",
+   "family": "mtsvane",
+   "added": "2026-09-22"
+  },
+  {
+   "id": "tsisperi",
+   "ka": "ცისფერი",
+   "ru": "голубой",
+   "tr": "ци́спэри",
+   "pic": "color:#4FC3F7",
+   "topic": "colors",
+   "family": "tsisperi",
+   "added": "2026-09-22"
+  },
+  {
+   "id": "qavisperi",
+   "ka": "ყავისფერი",
+   "ru": "коричневый",
+   "tr": "кави́спэри",
+   "pic": "color:#8D5524",
+   "topic": "colors",
+   "family": "qavisperi",
+   "added": "2026-09-22"
+  },
+  {
+   "id": "shavi",
+   "ka": "შავი",
+   "ru": "чёрный",
+   "tr": "шави",
+   "pic": "color:#212121",
+   "topic": "colors",
+   "family": "shavi",
+   "added": "2026-09-22"
+  },
+  {
+   "id": "tetri",
+   "ka": "თეთრი",
+   "ru": "белый",
+   "tr": "тэтри",
+   "pic": "color:#FFFFFF",
+   "topic": "colors",
+   "family": "tetri",
+   "added": "2026-09-22"
+  },
+  {
+   "id": "kalami",
+   "ka": "კალამი",
+   "ru": "ручка",
+   "tr": "калами",
+   "pic": "🖊️",
+   "topic": "bag",
+   "family": "kalami",
+   "added": "2026-09-23"
+  },
+  {
+   "id": "pankari",
+   "ka": "ფანქარი",
+   "ru": "карандаш",
+   "tr": "панкари",
+   "pic": "✏️",
+   "topic": "bag",
+   "family": "pankari",
+   "added": "2026-09-23"
+  },
+  {
+   "id": "sakhazavi",
+   "ka": "სახაზავი",
+   "ru": "линейка",
+   "tr": "сахазави",
+   "pic": "📏",
+   "topic": "bag",
+   "family": "sakhazavi",
+   "added": "2026-09-23"
+  },
+  {
+   "id": "satleli",
+   "ka": "სათლელი",
+   "ru": "точилка",
+   "tr": "сатлели",
+   "pic": "svg:sharpener",
+   "topic": "bag",
+   "family": "satleli",
+   "added": "2026-09-23"
+  },
+  {
+   "id": "sashleli",
+   "ka": "საშლელი",
+   "ru": "ластик",
+   "tr": "сашлели",
+   "pic": "svg:eraser",
+   "topic": "bag",
+   "family": "sashleli",
+   "added": "2026-09-23"
+  },
+  {
+   "id": "tsebo",
+   "ka": "წებო",
+   "ru": "клей",
+   "tr": "цэбо",
+   "pic": "svg:glue",
+   "topic": "bag",
+   "family": "tsebo",
+   "added": "2026-09-23"
+  },
+  {
+   "id": "makrateli",
+   "ka": "მაკრატელი",
+   "ru": "ножницы",
+   "tr": "макратэли",
+   "pic": "✂️",
+   "topic": "bag",
+   "family": "makrateli",
+   "added": "2026-09-23"
+  },
+  {
+   "id": "mostsavle",
+   "ka": "მოსწავლე",
+   "ru": "ученик / ученица",
+   "tr": "мосц’авле",
+   "pic": "🧑‍🎓",
+   "topic": "people",
+   "family": "mostsavle",
+   "added": "2026-09-24"
+  },
+  {
+   "id": "magida",
+   "ka": "მაგიდა",
+   "ru": "стол",
+   "tr": "магида",
+   "pic": "svg:table",
+   "topic": "room",
+   "family": "magida",
+   "added": "2026-09-24"
+  },
+  {
+   "id": "merkhi",
+   "ka": "მერხი",
+   "ru": "парта",
+   "tr": "мерхи",
+   "pic": "svg:desk",
+   "topic": "room",
+   "family": "merkhi",
+   "added": "2026-09-24"
+  },
+  {
+   "id": "skami",
+   "ka": "სკამი",
+   "ru": "стул",
+   "tr": "сками",
+   "pic": "🪑",
+   "topic": "room",
+   "family": "skami",
+   "added": "2026-09-24"
+  },
+  {
+   "id": "karada",
+   "ka": "კარადა",
+   "ru": "шкаф",
+   "tr": "карада",
+   "pic": "svg:wardrobe",
+   "topic": "room",
+   "family": "karada",
+   "added": "2026-09-24"
+  },
+  {
+   "id": "saati",
+   "ka": "საათი",
+   "ru": "часы",
+   "tr": "саати",
+   "pic": "🕐",
+   "topic": "room",
+   "family": "saati",
+   "added": "2026-09-25"
+  },
+  {
+   "id": "surati",
+   "ka": "სურათი",
+   "ru": "картина",
+   "tr": "сурати",
+   "pic": "🖼️",
+   "topic": "room",
+   "family": "surati",
+   "added": "2026-09-25"
+  },
+  {
+   "id": "ruka",
+   "ka": "რუკა",
+   "ru": "карта",
+   "tr": "рука",
+   "pic": "🗺️",
+   "topic": "room",
+   "family": "ruka",
+   "added": "2026-09-25"
+  },
+  {
+   "id": "taro",
+   "ka": "თარო",
+   "ru": "полка",
+   "tr": "таро",
+   "pic": "svg:shelf",
+   "topic": "room",
+   "family": "taro",
+   "added": "2026-09-25"
+  },
+  {
+   "id": "kari",
+   "ka": "კარი",
+   "ru": "дверь",
+   "tr": "кариʲ",
+   "pic": "🚪",
+   "topic": "room",
+   "family": "kari",
+   "added": "2026-09-25"
+  },
+  {
+   "id": "panjara",
+   "ka": "ფანჯარა",
+   "ru": "окно",
+   "tr": "пандара",
+   "pic": "🪟",
+   "topic": "room",
+   "family": "panjara",
+   "added": "2026-09-25"
+  },
+  {
+   "id": "tsera",
+   "ka": "წერა",
+   "ru": "писать",
+   "tr": "цера",
+   "pic": "✍️",
+   "topic": "verbs",
+   "family": "write",
+   "added": "2026-09-29"
+  },
+  {
+   "id": "vtser",
+   "ka": "ვწერ",
+   "ru": "пишу",
+   "tr": "вцер",
+   "pic": "✍️",
+   "topic": "verbs",
+   "family": "write",
+   "added": "2026-09-29"
+  },
+  {
+   "id": "datsere",
+   "ka": "დაწერე",
+   "ru": "напиши",
+   "tr": "дацере",
+   "pic": "✍️",
+   "topic": "verbs",
+   "family": "write",
+   "added": "2026-09-29"
+  },
+  {
+   "id": "kitkhva",
+   "ka": "კითხვა",
+   "ru": "читать",
+   "tr": "китхва",
+   "pic": "👀📖",
+   "topic": "verbs",
+   "family": "read",
+   "added": "2026-09-29"
+  },
+  {
+   "id": "vkitkhulob",
+   "ka": "ვკითხულობ",
+   "ru": "читаю",
+   "tr": "вкицхулоб",
+   "pic": "👀📖",
+   "topic": "verbs",
+   "family": "read",
+   "added": "2026-09-29"
+  },
+  {
+   "id": "tsaikitkhe",
+   "ka": "წაიკითხე",
+   "ru": "прочитай",
+   "tr": "цайкитхе",
+   "pic": "👀📖",
+   "topic": "verbs",
+   "family": "read",
+   "added": "2026-09-29"
+  },
+  {
+   "id": "khatva",
+   "ka": "ხატვა",
+   "ru": "рисовать",
+   "tr": "хатва",
+   "pic": "🎨",
+   "topic": "verbs",
+   "family": "draw",
+   "added": "2026-09-29"
+  },
+  {
+   "id": "vkhatav",
+   "ka": "ვხატავ",
+   "ru": "рисую",
+   "tr": "вхатав",
+   "pic": "🎨",
+   "topic": "verbs",
+   "family": "draw",
+   "added": "2026-09-29"
+  },
+  {
+   "id": "dakhate",
+   "ka": "დახატე",
+   "ru": "нарисуй",
+   "tr": "дахате",
+   "pic": "🎨",
+   "topic": "verbs",
+   "family": "draw",
+   "added": "2026-09-29"
+  },
+  {
+   "id": "gaaghe",
+   "ka": "გააღე",
+   "ru": "открой",
+   "tr": "гаагэ",
+   "pic": "🔓",
+   "topic": "commands",
+   "family": "gaaghe",
+   "added": "2026-09-30"
+  },
+  {
+   "id": "dakhure",
+   "ka": "დახურე",
+   "ru": "закрой",
+   "tr": "дахурэ",
+   "pic": "🔒",
+   "topic": "commands",
+   "family": "dakhure",
+   "added": "2026-09-30"
+  },
+  {
+   "id": "dajeki",
+   "ka": "დაჯექი",
+   "ru": "садись",
+   "tr": "даджэки",
+   "pic": "🧎",
+   "topic": "commands",
+   "family": "dajeki",
+   "added": "2026-09-30"
+  },
+  {
+   "id": "adeki",
+   "ka": "ადექი",
+   "ru": "встань",
+   "tr": "адэки",
+   "pic": "🧍",
+   "topic": "commands",
+   "family": "adeki",
+   "added": "2026-09-30"
+  },
+  {
+   "id": "shemodi",
+   "ka": "შემოდი",
+   "ru": "заходи",
+   "tr": "шэмоди",
+   "pic": "➡️🚪",
+   "topic": "commands",
+   "family": "shemodi",
+   "added": "2026-09-30"
+  },
+  {
+   "id": "gadi",
+   "ka": "გადი",
+   "ru": "выходи",
+   "tr": "гади",
+   "pic": "🚪➡️",
+   "topic": "commands",
+   "family": "gadi",
+   "added": "2026-09-30"
+  },
+  {
+   "id": "daitsqo",
+   "ka": "დაიწყო",
+   "ru": "началось",
+   "tr": "даицко",
+   "pic": "▶️",
+   "topic": "commands",
+   "family": "daitsqo",
+   "added": "2026-09-30"
+  },
+  {
+   "id": "dasrulda",
+   "ka": "დასრულდა",
+   "ru": "закончилось",
+   "tr": "дасрулда",
+   "pic": "🏁",
+   "topic": "commands",
+   "family": "dasrulda",
+   "added": "2026-09-30"
+  },
+  {
+   "id": "sheidzleba",
+   "ka": "შეიძლება",
+   "ru": "можно",
+   "tr": "шэйдзлеба",
+   "pic": "✅",
+   "topic": "commands",
+   "family": "sheidzleba",
+   "added": "2026-09-30"
+  },
+  {
+   "id": "ar-sheidzleba",
+   "ka": "არ შეიძლება",
+   "ru": "нельзя",
+   "tr": "ар шэйдзлеба",
+   "pic": "⛔",
+   "topic": "commands",
+   "family": "ar-sheidzleba",
+   "added": "2026-09-30"
+  }
+ ]
+}
