@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- «Гоги» — the game's cat mascot. Expressions are switched in CSS via .mood-* classes on the parent. -->
+  <defs>
+    <radialGradient id="fur" cx="45%" cy="35%" r="70%"><stop offset="0" stop-color="#FFC56B"/><stop offset="1" stop-color="#F29A2E"/></radialGradient>
+  </defs>
+  <path d="M40 78 L50 22 L88 56 Z" fill="#F29A2E" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M160 78 L150 22 L112 56 Z" fill="#F29A2E" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M52 44 L57 34 L72 50 Z M148 44 L143 34 L128 50 Z" fill="#FF8FAB"/>
+  <ellipse cx="100" cy="112" rx="72" ry="64" fill="url(#fur)" stroke="#2B2D42" stroke-width="6"/>
+  <path d="M100 52 v18 M84 56 l4 14 M116 56 l-4 14" stroke="#D97B12" stroke-width="5" stroke-linecap="round"/>
+  <ellipse cx="100" cy="140" rx="38" ry="26" fill="#FFF3DC"/>
+  <g class="eyes">
+    <ellipse cx="72" cy="106" rx="11" ry="14" fill="#2B2D42"/><ellipse cx="128" cy="106" rx="11" ry="14" fill="#2B2D42"/>
+    <circle cx="76" cy="100" r="4" fill="#fff"/><circle cx="132" cy="100" r="4" fill="#fff"/>
+  </g>
+  <path class="eyes-happy" d="M60 108 q12 -14 24 0 M116 108 q12 -14 24 0" fill="none" stroke="#2B2D42" stroke-width="6" stroke-linecap="round"/>
+  <ellipse cx="54" cy="130" rx="11" ry="7" fill="#FF8FAB" opacity=".7"/><ellipse cx="146" cy="130" rx="11" ry="7" fill="#FF8FAB" opacity=".7"/>
+  <path d="M94 128 h12 l-6 7 z" fill="#E23D4B" stroke="#2B2D42" stroke-width="3" stroke-linejoin="round"/>
+  <path class="mouth" d="M88 142 q6 8 12 0 q6 8 12 0" fill="none" stroke="#2B2D42" stroke-width="5" stroke-linecap="round"/>
+  <path class="mouth-open" d="M86 140 q14 22 28 0 z" fill="#E23D4B" stroke="#2B2D42" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M30 132 h26 M30 146 h24 M170 132 h-26 M170 146 h-24" stroke="#2B2D42" stroke-width="4" stroke-linecap="round"/>
+  <path d="M66 176 q34 18 68 0" fill="#E23D4B" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+  <circle cx="100" cy="184" r="8" fill="#F2B134" stroke="#2B2D42" stroke-width="4"/>
+</svg>

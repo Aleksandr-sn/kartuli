@@ -1,8 +1,8 @@
 /* Offline cache. VERSION is rewritten by scripts/build.py on every build → clients pick up new words/audio. */
-const VERSION = "kartuli-20261001-012006";
+const VERSION = "kartuli-20261001-012701";
 const CORE = ["./", "index.html", "style.css", "app.js", "manifest.webmanifest", "icons/icon.svg", "icons/icon-192.png",
-  "icons/icon-512.png", "words.json", "fx/cat-dance.mp4", "fx/great-day.mp4"];
-const PROMPTS = ["start", "new", "listen", "sound", "good1", "good2", "good3", "good4", "again", "done"];
+  "icons/icon-512.png", "words.json", "pics/mascot.svg", "fx/cat-dance.mp4", "fx/great-day.mp4"];
+const PROMPTS = ["hello", "letsgo", "start", "new", "listen", "sound", "good1", "good2", "good3", "good4", "again", "done"];
 
 self.addEventListener("install", e => e.waitUntil((async () => {
   const c = await caches.open(VERSION);
