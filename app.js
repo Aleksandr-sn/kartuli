@@ -246,6 +246,21 @@ function loginScreen() {
   };
 }
 
+function resetScreen(token) {
+  app.innerHTML = `<section class="screen onboard">${mascot("", "Придумай новый пароль — можно простой, от 3 символов.")}
+    <input id="np" class="name-input" maxlength="32" placeholder="Новый пароль" autocomplete="new-password">
+    <button class="play" id="save" disabled>Сохранить</button></section>`;
+  const np = $("#np"), sv = $("#save");
+  np.oninput = () => { sv.disabled = np.value.trim().length < 3; };
+  sv.onclick = async () => {
+    try {
+      const r = await api("reset", { token, password: np.value.trim() });
+      S = Object.assign(fresh(), r.progress || {}, { name: r.name, token: r.token, email: r.email || "" }); save();
+      toast("Пароль обновлён ✓"); home();
+    } catch { toast("Ссылка устарела. Запросите новую на экране входа."); onboarding(); }
+  };
+}
+
 /* ---------------- home */
 function home() {
   if (!S.name) return onboarding();
@@ -614,6 +629,10 @@ function profile() {
   }
   API = await fetch("api/ping", { cache: "no-store" }).then(r => r.ok).catch(() => false);
   if (!S.seenVersion) S.seenVersion = DB.version;
+  const q = new URLSearchParams(location.search);  // links from the e-mails
+  if (q.has("verified") || q.has("reset")) history.replaceState(null, "", location.pathname);
+  if (q.has("verified")) toast(q.get("verified") === "1" ? "Почта подтверждена ✓" : "Ссылка устарела — отправьте письмо ещё раз");
+  if (q.get("reset") && API) return resetScreen(q.get("reset"));
   home();
   if (API && S.token) api("me").then(r => { if (r.progress && (r.progress.lessons || 0) > S.lessons) { Object.assign(S, r.progress); save(); home(); } }).catch(() => {});
   if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(() => {});
