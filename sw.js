@@ -1,8 +1,8 @@
 /* Offline cache. VERSION is rewritten by scripts/build.py on every build → clients pick up new words/audio. */
-const VERSION = "kartuli-20261001-012701";
+const VERSION = "kartuli-20261001-115756";
 const CORE = ["./", "index.html", "style.css", "app.js", "manifest.webmanifest", "icons/icon.svg", "icons/icon-192.png",
-  "icons/icon-512.png", "words.json", "pics/mascot.svg", "fx/cat-dance.mp4", "fx/great-day.mp4"];
-const PROMPTS = ["hello", "letsgo", "start", "new", "listen", "sound", "good1", "good2", "good3", "good4", "again", "done"];
+  "icons/icon-512.png", "words.json", "letters.json", "pics/mascot.svg", "fx/cat-dance.mp4", "fx/great-day.mp4"];
+const PROMPTS = ["hello", "letsgo", "new_letter", "find_letter", "first_letter", "trace", "letters_go", "start", "new", "listen", "sound", "good1", "good2", "good3", "good4", "again", "done"];
 
 self.addEventListener("install", e => e.waitUntil((async () => {
   const c = await caches.open(VERSION);
@@ -12,6 +12,12 @@ self.addEventListener("install", e => e.waitUntil((async () => {
   for (const w of db.words) {
     files.push(`audio/giorgi/${w.id}.mp3`, `audio/eka/${w.id}.mp3`, `audio/ru/${w.id}.mp3`);
     if (w.pic.startsWith("svg:")) files.push(`pics/${w.pic.slice(4)}.svg`);
+  }
+  const lt = await (await fetch("letters.json", { cache: "no-cache" })).json();
+  for (const x of lt.letters) {
+    for (const v of ["giorgi", "eka"]) files.push(`audio/letters/${v}/${x.id}.mp3`, `audio/letters/${v}/ex-${x.id}.mp3`);
+    files.push(`audio/letters/ru/ex-${x.id}.mp3`);
+    if (x.ex.pic.startsWith("svg:")) files.push(`pics/${x.ex.pic.slice(4)}.svg`);
   }
   await Promise.allSettled([...new Set(files)].map(f => c.add(f)));
   await self.skipWaiting();

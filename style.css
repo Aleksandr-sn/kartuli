@@ -5,7 +5,7 @@
   --leaf: #22C38E; --leaf-d: #13936A; --leaf-l: #D8F8EC; --sky: #5CC8FF; --sky-d: #2E9BD6;
   --text: #1B2350; --muted: #6E7597;
   --shadow: 0 8px 0 rgba(8, 14, 40, .22), 0 20px 36px rgba(8, 14, 40, .22);
-  --ka: "Noto Serif Georgian", serif; --disp: "Unbounded", "Manrope", sans-serif; --body: "Manrope", sans-serif;
+  --ka: "Noto Serif Georgian", serif; --glyph: "Noto Sans Georgian", "Noto Serif Georgian", sans-serif; --disp: "Unbounded", "Manrope", sans-serif; --body: "Manrope", sans-serif;
 }
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
 html, body { margin: 0; min-height: 100%; }
@@ -86,7 +86,7 @@ button:disabled { opacity: .45; cursor: default; }
 .week span i { width: 34px; height: 34px; border-radius: 50%; background: var(--cream); display: grid; place-items: center; font-style: normal; font-size: 18px; }
 .week span.hit i { background: #FFE7B3; } .week span.today { color: var(--pom-d); } .week span.today i { outline: 3px solid var(--pom); }
 .play { margin-top: 16px; width: 100%; padding: 20px; border-radius: 22px; background: var(--pom); color: #fff;
-  font-family: var(--disp); font-weight: 800; font-size: 24px; letter-spacing: .5px; box-shadow: 0 7px 0 var(--pom-d);
+  font-family: var(--disp); font-weight: 800; font-size: clamp(17px, 5.6vw, 24px); letter-spacing: .3px; box-shadow: 0 7px 0 var(--pom-d);
   transition: transform .08s, box-shadow .08s; animation: glow 2.4s ease-in-out infinite; }
 @keyframes glow { 50% { filter: brightness(1.08); } }
 .play:active, .btn:active, .next:active { transform: translateY(5px); box-shadow: 0 2px 0 rgba(0,0,0,.25); }
@@ -198,3 +198,46 @@ button:disabled { opacity: .45; cursor: default; }
 .confetti i { position: absolute; font-style: normal; font-size: 26px; animation: burst 1s ease-out forwards; }
 @keyframes burst { to { transform: translate(var(--dx), var(--dy)) rotate(var(--rot)); opacity: 0; } }
 @media (min-width: 700px) { .opts { gap: 18px; } .card { padding: 30px; } .mascot .cat { width: 110px; } }
+
+/* ---------- modes & letters */
+.modes { display: flex; gap: 6px; padding: 5px; border-radius: 18px; background: rgba(255, 255, 255, .08); }
+.modes button { flex: 1; padding: 12px; border-radius: 14px; font-family: var(--disp); font-weight: 700; font-size: 16px; opacity: .7; }
+.modes button.on { background: var(--paper); color: var(--ink); opacity: 1; box-shadow: 0 4px 0 rgba(0,0,0,.2); }
+.letters { display: grid; grid-template-columns: repeat(auto-fill, minmax(64px, 1fr)); gap: 10px; }
+.lt { aspect-ratio: 1; border-radius: 18px; background: rgba(255, 255, 255, .08); font-family: var(--glyph); font-weight: 700; font-size: 34px; color: rgba(255,255,255,.55); }
+.lt.seen { background: #2F4B9A; color: #fff; } .lt.known { background: var(--gold); color: var(--ink); box-shadow: 0 5px 0 var(--gold-d); }
+.lt.next { background: var(--pom); color: #fff; box-shadow: 0 5px 0 var(--pom-d); animation: pulse 1.6s infinite; }
+.pic.glyph { font-family: var(--glyph); font-weight: 700; font-size: clamp(52px, 14vw, 80px); line-height: 1; color: var(--ink); }
+.letter-wrap { background: color-mix(in srgb, var(--pom) 18%, #fff); }
+.pic-wrap .pic.glyph { font-size: clamp(120px, 34vw, 170px); color: var(--pom-d); }
+.lname { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+.lname b { font-family: var(--ka); font-size: 30px; } .lname span { font-weight: 800; color: var(--muted); }
+.example { display: flex; align-items: center; gap: 12px; padding: 10px 16px; border-radius: 18px; background: var(--cream); }
+.ex-pic .pic.emoji { font-size: 44px; } .ex-pic .pic.svg { width: 52px; height: 52px; }
+.example b { display: block; font-family: var(--ka); font-size: 24px; } .example u { color: var(--pom-d); text-decoration: none; border-bottom: 4px solid var(--pom); }
+.example small { font-weight: 700; color: var(--muted); }
+.ex-big { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 16px 26px; border-radius: 28px; background: #E6F6FF; box-shadow: 0 6px 0 #BFE3F7; position: relative; }
+.ex-big .pic.emoji { font-size: 84px; } .ex-big .pic.svg { width: 110px; height: 110px; }
+.ex-big span { font-weight: 800; color: var(--ink); }
+.ex-big.on::before { content: ""; position: absolute; inset: -8px; border-radius: 34px; border: 4px solid var(--sky); animation: ring 1.1s infinite; }
+.glyph-opt .pic.glyph { font-size: clamp(56px, 15vw, 84px); }
+.trace { position: relative; width: min(78vw, 340px); aspect-ratio: 1; border-radius: 28px; background: #fff; border: 3px dashed var(--line); overflow: hidden; }
+.trace canvas { width: 100%; height: 100%; display: block; touch-action: none; }
+.meter { position: absolute; left: 14px; right: 14px; bottom: 12px; height: 10px; border-radius: 99px; background: var(--cream); overflow: hidden; }
+.meter i { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--leaf), #53E0AE); transition: width .3s; }
+.trace.ok { border-color: var(--leaf); border-style: solid; }
+
+/* ---------- account bits */
+.link { padding: 10px; font-weight: 800; color: #fff; opacity: .8; text-decoration: underline; text-underline-offset: 4px; }
+.note { margin: -6px 8px 0; text-align: center; font-weight: 700; opacity: .65; font-size: 14px; }
+.toast { position: fixed; left: 50%; top: max(16px, env(safe-area-inset-top)); transform: translateX(-50%); z-index: 20; width: min(440px, calc(100% - 32px));
+  background: #fff; color: var(--text); padding: 14px 16px; border-radius: 18px; font-weight: 700; box-shadow: 0 12px 30px rgba(0,0,0,.35);
+  text-align: center; animation: rise .3s both; transition: opacity .5s; }
+.toast.out { opacity: 0; }
+.row-in { display: flex; gap: 8px; margin-top: 10px; }
+.small-input { flex: 1; min-width: 0; padding: 12px 14px; border-radius: 14px; background: #fff; border: 2px solid var(--line); color: var(--text); font-weight: 700; -webkit-user-select: text; user-select: text; }
+.ranks { display: grid; gap: 8px; }
+.rk { display: flex; align-items: center; gap: 10px; padding: 12px 14px; border-radius: 18px; background: rgba(255, 255, 255, .08); font-weight: 800; }
+.rk.me-row { background: var(--paper); color: var(--text); }
+.rk .pos { width: 30px; text-align: center; font-family: var(--disp); } .rk .av-s { font-size: 26px; }
+.rk b { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; } .rk .w { font-size: 13px; opacity: .75; } .rk .s { font-family: var(--disp); }
