@@ -1,5 +1,5 @@
 /* Offline cache. VERSION is rewritten by scripts/build.py on every build → clients pick up new words/audio. */
-const VERSION = "kartuli-20261001-120238";
+const VERSION = "kartuli-20261001-122154";
 const CORE = ["./", "index.html", "style.css", "app.js", "manifest.webmanifest", "icons/icon.svg", "icons/icon-192.png",
   "icons/icon-512.png", "words.json", "letters.json", "pics/mascot.svg", "fx/cat-dance.mp4", "fx/great-day.mp4"];
 const PROMPTS = ["hello", "letsgo", "new_letter", "find_letter", "first_letter", "trace", "letters_go", "start", "new", "listen", "sound", "good1", "good2", "good3", "good4", "again", "done"];

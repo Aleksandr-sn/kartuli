@@ -336,7 +336,7 @@ const start = topic => begin(buildLesson(topic), "words", topic);
 const startLetters = () => begin(buildLetterLesson(), "letters");
 function steps() {
   const pct = L.i / L.tasks.length * 100;
-  return `<div class="lesson-top"><button class="x" id="x" aria-label="Выйти">✕</button>
+  return `<div class="lesson-top"><button class="x" id="x" aria-label="На главную">🏠</button>
     <div class="track"><i style="width:${pct}%"></i><span class="runner" style="left:${pct}%">${S.avatar}</span></div></div>`;
 }
 function prefetch(i) { L.tasks.slice(i, i + 3).forEach(t => { blobURL(kaSrc(t.w)); blobURL(ruSrc(t.w)); if (isLetter(t.w)) blobURL(exSrc(t.w)); }); }

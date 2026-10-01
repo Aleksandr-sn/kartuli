@@ -107,7 +107,8 @@ button:disabled { opacity: .45; cursor: default; }
 
 /* ---------- lesson */
 .lesson-top { display: flex; align-items: center; gap: 14px; }
-.x { width: 44px; height: 44px; border-radius: 14px; background: rgba(255, 255, 255, .1); font-size: 20px; flex: none; }
+.x { width: 48px; height: 48px; border-radius: 16px; background: rgba(255, 255, 255, .14); font-size: 26px; flex: none; box-shadow: 0 4px 0 rgba(0,0,0,.25); }
+.x:active { transform: translateY(3px); box-shadow: 0 1px 0 rgba(0,0,0,.25); }
 .track { position: relative; flex: 1; height: 16px; border-radius: 99px; background: rgba(255, 255, 255, .15); margin-right: 16px; }
 .track i { position: absolute; inset: 0 auto 0 0; border-radius: inherit; background: linear-gradient(90deg, var(--gold), #FFD978); transition: width .4s; }
 .runner { position: absolute; top: 50%; transform: translate(-50%, -55%); font-size: 30px; transition: left .4s; filter: drop-shadow(0 3px 0 rgba(0,0,0,.25)); }
